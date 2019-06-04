@@ -4,6 +4,10 @@ class ArticlesController < ApplicationController
         @article=Article.new
     end
 
+    def index
+        @articles = Article.all
+    end
+
     def edit
         @article=Article.find(params[:id])
     end
@@ -26,13 +30,12 @@ class ArticlesController < ApplicationController
         else
             render 'new'
         end
-    
+    end
 
     def show
         @article=Article.find(params[:id])
     end
         
-    end
 
     private 
         def article_params
