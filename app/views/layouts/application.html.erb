@@ -12,6 +12,7 @@
   <body>
   <%= render 'layouts/navigation' %>
   <%= render 'layouts/message' %>
+  <%= debug(params) if Rails.env.development? %>
   <div class="container">
     <%= yield %>
     </div>
